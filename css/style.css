@@ -323,6 +323,12 @@ body {
   color: #333;
   min-height: 100%; }
 
+.section--grey {
+  background-color: #f7f7f7; }
+
+.section--purple {
+  background-color: #4a3949; }
+
 .container {
   max-width: 1200px;
   width: 96%;
@@ -349,8 +355,6 @@ nav {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in; }
   .logo:hover, .logo:focus, .logo:active, .logo--active {
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
@@ -382,8 +386,6 @@ nav {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in; }
   .menu__btn:hover, .menu__btn:focus, .menu__btn:active, .menu__btn--active {
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
@@ -404,14 +406,12 @@ nav {
     text-transform: uppercase;
     letter-spacing: 5px; }
   .cover__subtitle {
-    font-size: 3.2rem;
     font-family: 'Noto Serif';
+    font-size: 3.2rem;
     font-weight: 700;
     font-size: italic;
     margin: 0;
-    opacity: .6;
-    position: absolute;
-    top: 31%; }
+    opacity: .6; }
 
 .flex {
   display: -webkit-box;
@@ -448,21 +448,56 @@ nav {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in; }
   .btn:hover, .btn:focus, .btn:active, .btn--active {
-    color: #000;
-    background-color: #FFF; }
+    color: #fff;
+    background-color: #f57365;
+    border: 2px solid #f57365; }
 
 .reward {
   color: #fff;
-  font-weight: 700; }
+  font-weight: 700;
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
+  .reward:hover, .reward:focus, .reward:active, .reward--active {
+    color: #f57365; }
 
-.get {
+.title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .title::after {
+    content: '';
+    border-bottom: 1px solid red;
+    width: 50%; }
+  .title--app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .title--app::after {
+      content: '';
+      border-bottom: 1px solid red;
+      width: 15%; }
+
+.features {
   margin: 100px 0;
   width: 100%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .get__block {
+  .features__block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -477,7 +512,7 @@ nav {
     -ms-flex-align: center;
     align-items: center;
     margin: 0 50px; }
-  .get__imgs {
+  .features__imgs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -491,31 +526,34 @@ nav {
     border-radius: 100px;
     width: 100px;
     height: 100px; }
-    .get__imgs--center {
+    .features__imgs--center {
       margin: 0; }
+  .features__title {
+    margin: 0 13%;
+    margin: 20px 0 30px 0; }
 
-.title {
+.app {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0 12%;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin: 20px 0 30px 0; }
-  .title::after {
-    content: '';
-    border-bottom: 1px solid red;
-    width: 5%;
-    position: absolute;
-    top: 60%;
-    margin-left: 2%; }
-  .title--center::after {
-    content: '';
-    border-bottom: 1px solid red;
-    width: 5%;
-    position: absolute;
-    top: 60%;
-    margin-left: 3.5%; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .app__img {
+    margin-top: 100px;
+    height: 760px;
+    max-width: 80%;
+    width: 70%;
+    overflow: hidden; }
+  .app__info {
+    margin-top: 100px;
+    margin-left: 116px;
+    width: 800px; }
+  .app p {
+    font-size: 1.6rem;
+    color: #676767;
+    font-weight: 300; }
