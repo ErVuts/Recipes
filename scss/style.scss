@@ -126,7 +126,7 @@ nav {
 		letter-spacing:5px;		
 	}
 	&__subtitle {
-		font-family: 'Noto Serif';
+		font-family:'Noto Serif';
 		font-size: 3.2rem;
 		font-weight: 700;
 		font-size: italic;
@@ -196,6 +196,14 @@ nav {
 			width: 15%;
 		}
 	}
+	&--examples {
+		margin:100px 0 40px 0;
+		&::after {
+			content: '';
+			border-bottom: 1px solid red;
+			width: 6%;
+		}
+	}
 
 }
 
@@ -231,7 +239,6 @@ nav {
 
 .app {
 	display: flex;
-	flex-direction: row;
 	&__img {
 			margin-top: 100px;
 			height: 760px;
@@ -289,10 +296,6 @@ nav {
 		margin-top: 30px;
 		margin-bottom: 40px;
 	}
-	&__btns {
-
-		
-	}
 }
 
 .slider {
@@ -314,5 +317,40 @@ nav {
  		@include hover{
  			opacity:1;
  		}
+	}
+}
+
+.examples {
+	display: flex;
+	flex-wrap:wrap;
+    justify-content: center;
+	overflow: hidden;
+}
+
+.example {
+	color:#fff;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: -10px;
+	width: 320px;
+	&__img{
+	}
+	&__title {
+		font-family: 'Lato';
+		font-weight: 700;
+		font-size: 3.6rem;
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform:translate(-50%, -90%);
+		
+	}
+	&__subtitle {
+		font-family:'Noto Serif';
+		font-size: 1.5rem;
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform:translate(-50%, -110%);
 	}
 }
