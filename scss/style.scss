@@ -123,7 +123,7 @@ nav {
 		font-weight: 700;
 		margin: 0;
 		text-transform:uppercase;
-		letter-spacing:5px;		
+		letter-spacing:5px;	
 	}
 	&__subtitle {
 		font-family:'Noto Serif';
@@ -162,9 +162,9 @@ nav {
 		padding: 15px 80px 20px 80px;
 		margin-bottom:25px;
 			@include hover {
-			color:#fff;
-			background-color: $main-color;
-			border:2px solid $main-color;
+			color:#000;
+			background-color: #fff;
+			border:2px solid #fff;
 			}
 	}
 
@@ -196,7 +196,7 @@ nav {
 			width: 15%;
 		}
 	}
-	&--examples {
+	&--cuisines {
 		margin:100px 0 40px 0;
 		&::after {
 			content: '';
@@ -287,12 +287,12 @@ nav {
 	&__quote {
 		font-family:'Lato Hairline';
 		font-size: 3rem;
-		opacity:.4;
+		opacity:.8;
 	}
 	&__author {
 		font-family: 'Lato Hairline Italic';
 		font-size: 1.8rem;
-		opacity:.4;
+		opacity:.8;
 		margin-top: 30px;
 		margin-bottom: 40px;
 	}
@@ -301,6 +301,7 @@ nav {
 .slider {
 	&__dots {
 		list-style-type: none;
+		padding: 0;
 		li {
 		display: inline-block;
 		}
@@ -320,20 +321,27 @@ nav {
 	}
 }
 
-.examples {
+.cuisines {
 	display: flex;
 	flex-wrap:wrap;
-    justify-content: center;
-	overflow: hidden;
 }
 
-.example {
+.cuisine {
 	color:#fff;
 	text-transform: uppercase;
 	position: relative;
 	margin-bottom: -10px;
-	width: 320px;
+	text-shadow: 1px 1px 2px #000;
+	width: 20%;
+	&__link {
+		color:#fff;
+		font-size: 0;
+	}
 	&__img{
+	width: 100%;
+	@include hover {
+		opacity:.5;
+	}
 	}
 	&__title {
 		font-family: 'Lato';
@@ -352,5 +360,56 @@ nav {
 		top:50%;
 		left: 50%;
 		transform:translate(-50%, -110%);
+	}
+}
+
+.amounts {
+	display: flex;
+	justify-content: center;
+	margin: 60px 0;
+}
+
+.amount {
+		width: 100%;
+		text-align: center;
+	&__title{
+		font-size: 3.6rem;
+		margin: 0;
+	}
+	&__subtitle {
+		font-size: 1.6rem;
+		color:#444444;
+		margin: 0;
+	}
+}
+
+footer {
+	background-color: #f7f7f7;
+	border-top:2px solid #e2e2e2;
+	height: 90px;
+	display: flex;
+	.container {
+		display: flex;
+		justify-content:space-between;
+		align-items:center;
+	}
+}
+
+.copyright {
+	span {
+		font-size: 1.4rem;
+		color: #d3d3d3;
+	}
+}
+
+.made-by {
+	letter-spacing: 4px;
+	span {
+		color:#8b8b8b;
+	}
+	a {
+		text-decoration: none;
+		color:#000;
+		font-weight: 700;
 	}
 }
