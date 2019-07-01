@@ -123,7 +123,8 @@ nav {
 		font-weight: 700;
 		margin: 0;
 		text-transform:uppercase;
-		letter-spacing:5px;	
+		letter-spacing:5px;
+	
 	}
 	&__subtitle {
 		font-family:'Noto Serif';
@@ -132,7 +133,7 @@ nav {
 		font-size: italic;
 		margin: 0;
 		opacity:.6;
-		
+		line-height:1;
 	}
 }
 
